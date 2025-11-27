@@ -19,7 +19,7 @@ export default [
     "department": "D123",
     "credits": 3,
     "description": "This course offers a comprehensive exploration of aerodynamics, focusing on the principles and applications of airflow and its effects on flying objects. Topics include fluid dynamics, airfoil design, lift and drag forces, and the aerodynamic considerations in aircraft design. The course blends theoretical learning with practical applications, suitable for students pursuing a career in aeronautics or astronautics engineering.",
-    "image": "/images/aerodynamics.jpg"
+    "image": "/images/teslabot.jpg"
   },
   {
     "_id": "RS103",
