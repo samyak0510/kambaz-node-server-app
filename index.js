@@ -16,7 +16,15 @@ const app = express();
 app.use(
     cors({
         credentials: true,
-        origin: process.env.CLIENT_URL || "http://localhost:3000",
+        origin: (origin, callback) => {
+            if (!origin || origin.startsWith("http://localhost") || origin.endsWith(".vercel.app")) {
+                return callback(null, true);
+            }
+            if (process.env.CLIENT_URL && origin === process.env.CLIENT_URL) {
+                return callback(null, true);
+            }
+            return callback(new Error("Not allowed by CORS"));
+        },
     })
 );
 
